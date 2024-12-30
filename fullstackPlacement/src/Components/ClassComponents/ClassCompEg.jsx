@@ -12,3 +12,5 @@ render()
 }
 }
 export default ClassCompEg;
+
+//class component should always be in capitaletter for 1st letter

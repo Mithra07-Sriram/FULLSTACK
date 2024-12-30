@@ -5,9 +5,9 @@ function DefaultExplanation() {
         <div>
             <h2>What is default in JavaScript (and React)?</h2>
             <p>
-                In JavaScript, the <code>default</code> keyword is used to export a single value or 
-                component from a module. A <code>default</code> export allows importing the module 
-                without using curly braces <code>{`{ }`}</code> and lets you name the imported entity 
+                In JavaScript, the default keyword is used to export a single value or 
+                component from a module. A default export allows importing the module 
+                without using curly braces {`{ }`} and lets you name the imported entity 
                 anything you like.
             </p>
 

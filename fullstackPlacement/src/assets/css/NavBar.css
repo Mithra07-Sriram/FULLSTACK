@@ -1,0 +1,23 @@
+ul{
+    padding:0;
+    display:flex;
+    margin:0;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: chocolate;
+    color: azure;
+    padding: 10px;
+
+}
+li{
+    cursor: pointer;
+    padding:3px;
+
+}
+li:hover{
+    background-color: white;
+    color: chocolate;
+    padding:3px;
+    border-radius:10px;
+}
