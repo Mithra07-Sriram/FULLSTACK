@@ -1,11 +1,31 @@
-.box-model{
+/* Full page container */
+.home-container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    min-height: 100vh; /* Ensure full height of the viewport */
+}
+
+/* Main content box */
+.box-model {
     width: 300px;
     border: 10px solid green;
     padding: 100px;
-    margin: 100px;
-    background-color: lightgrey
-  
+    margin: auto; /* Center the box horizontally and vertically */
+    background-color: lightgrey;
+    flex-grow: 1; /* Allow the box to expand and push the footer down */
 }
-#idSEg{
-text-align: center;
+
+/* Header styles */
+#idSEg {
+    text-align: center;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    border-top: 2px solid green;
 }
