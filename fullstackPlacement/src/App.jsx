@@ -7,6 +7,7 @@ import Gallery from "./Components/FunctionalComponents/Gallery";
 import NavBar from "./Components/FunctionalComponents/NavBar";
 import "./assets/css/Home.css";
 import "./assets/css/NavBar.css";
+import "./assets/css/Contact.css";
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 
 
