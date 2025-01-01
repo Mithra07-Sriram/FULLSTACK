@@ -6,6 +6,7 @@ const About=(props)=>{
             <h2>I am a student @ {props.college} College</h2>
             <h2>othercolleges {props.clg1}</h2>
         </section>
+
     )
 
 }

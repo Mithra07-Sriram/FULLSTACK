@@ -3,7 +3,10 @@ import ClassCompEg from "./Components/ClassComponents/ClassCompEg";
 import Home from "./Components/FunctionalComponents/Home";
 import About from "./Components/FunctionalComponents/About";
 import Contact from "./Components/FunctionalComponents/Contact";
-import Gallery from "./Components/FunctionalComponents/Gallery";
+import GAllery from './Components/FunctionalComponents/GAllery';
+import UseEffect from './Components/FunctionalComponents/UseEffect';
+import UseRef from './Components/FunctionalComponents/UseRef';
+import UseContext from './Components/FunctionalComponents/UseContext';
 import NavBar from "./Components/FunctionalComponents/NavBar";
 import "./assets/css/Home.css";
 import "./assets/css/NavBar.css";
@@ -19,7 +22,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={ <About college="Kongu" clg1="naturopathy" />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery" element={<GAllery />} />
+        <Route path="/useeffect" element={<UseEffect />} />
+        <Route path="/useref" element={<UseRef />} />
+        <Route path="/usecontext" element={<UseContext />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       </BrowserRouter>

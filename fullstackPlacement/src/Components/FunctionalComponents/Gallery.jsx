@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-const Gallery=()=>{
+const GAllery=()=>{
     var [count,setCount]=useState(0);
    /* function increment()
     {
@@ -23,7 +23,8 @@ const Gallery=()=>{
          
          <button onClick={()=>{setCount(0)}}>Reset</button>
          </section>
+         
     )
 
 }
-export default Gallery;
+export default GAllery;
