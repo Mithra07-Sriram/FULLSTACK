@@ -7,6 +7,7 @@ import GAllery from './Components/FunctionalComponents/GAllery';
 import UseEffect from './Components/FunctionalComponents/UseEffect';
 import UseRef from './Components/FunctionalComponents/UseRef';
 import UseContext from './Components/FunctionalComponents/UseContext';
+import UseMemo from './Components/FunctionalComponents/UseMemo';
 import NavBar from "./Components/FunctionalComponents/NavBar";
 import "./assets/css/Home.css";
 import "./assets/css/NavBar.css";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/useeffect" element={<UseEffect />} />
         <Route path="/useref" element={<UseRef />} />
         <Route path="/usecontext" element={<UseContext />} />
+        <Route path="/usememo" element={<UseMemo />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       </BrowserRouter>
