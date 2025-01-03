@@ -20,37 +20,66 @@ app.get('/static', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'))
 })
 app.post('/signup',(req,res)=>{
-    console.log(req.body);
-    var {firstname,lastname,email}=req.body
-    console.log(firstname,lastname,email);
+     var {firstname,lastname,email,password}=req.body
+    
+     try{
+         var newUser=new User({
+             firstname:firstname,
+             lastname:lastname,
+             email:email,
+             password:password
+         })
+         var newUser=new User(req.body)
+         console.log(req.body.password);
+         newUser.save()
+         console.log("UserAdded Successfully")
+         res.status(200).send("User Added Successfully")
+ 
+     }
+     catch(err)
+     {
+         console.log(err);
+     }
+ })
+ app.get('/getsignup',async(req,res)=>{
+     try{
+         var allSignUpRecords =await User.find()
+         res.json(allSignUpRecords)
+         console.log("all data fetched")
+     }
+     catch(err){
+         console.log("err")
+         res.send(err)
+     }
+ })
+ app.post('/login',async(req,res)=>
+{
+    var {email,password}=req.body
     try{
-        var newUser=new User({
-            firstname:firstname,
-            lastname:lastname,
-            email:email
-        })
-        newUser.save()
-        console.log("UserAdded Successfully")
-        res.status(200).send("User Added Successfully")
+        var existinguser=await User.findOne({email:email})
+        console.log(existinguser);
+        if(existinguser)
+        {
+            if(existinguser.password==password){
+        res.json({message:"Login successful",loggedIn:true})
+            }
+            else{
+                res.json({message:"Invalid Password",loggedIn:false})
+            }
+        }
+        else{
+            res.json({message:"Invalid Email or Password",loggedIn:false})
+        }
 
     }
     catch(err)
     {
-        console.log(err);
+        console.log("Login Failure")
     }
 })
-app.get('/getsignup',async(req,res)=>
-{
-    try{
-           var allSignUpRecords=await User.find()
-           res.json(allSignUpRecords)
-           console.log("All Datas Fetched")
-    }
-    catch(err)
-    {
-        console.log("Cannot able to read the Records");
-    }
-})
-app.listen(PORT, () => {
-    console.log(`backend server started\nUrl: http://localhost:${PORT}`);
-});
+ 
+ app.listen(PORT, () => {
+     console.log(`backend server started\nUrl: http://localhost:${PORT}`);
+ });
+ 
+ 
