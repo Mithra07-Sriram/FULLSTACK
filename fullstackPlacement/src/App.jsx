@@ -3,7 +3,7 @@ import ClassCompEg from "./Components/ClassComponents/ClassCompEg";
 import Home from "./Components/FunctionalComponents/Home";
 import About from "./Components/FunctionalComponents/About";
 import Contact from "./Components/FunctionalComponents/Contact";
-import GAllery from './Components/FunctionalComponents/GAllery';
+import GAllery from './Components/FunctionalComponents/Gallery';
 import UseEffect from './Components/FunctionalComponents/UseEffect';
 import UseRef from './Components/FunctionalComponents/UseRef';
 import UseContext from './Components/FunctionalComponents/UseContext';
