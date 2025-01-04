@@ -9,6 +9,8 @@ import UseRef from './Components/FunctionalComponents/UseRef';
 import UseContext from './Components/FunctionalComponents/UseContext';
 import UseMemo from './Components/FunctionalComponents/UseMemo';
 import NavBar from "./Components/FunctionalComponents/NavBar";
+import Signup from './Components/FunctionalComponents/Signup';
+import Login from './Components/FunctionalComponents/Login';
 import "./assets/css/Home.css";
 import "./assets/css/NavBar.css";
 import "./assets/css/Contact.css";
@@ -28,6 +30,8 @@ function App() {
         <Route path="/useref" element={<UseRef />} />
         <Route path="/usecontext" element={<UseContext />} />
         <Route path="/usememo" element={<UseMemo />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       </BrowserRouter>
