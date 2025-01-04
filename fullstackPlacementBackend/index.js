@@ -1,11 +1,16 @@
 var express = require('express');
 var path = require('path');
 var mdb = require('mongoose');
+var cors=require('cors');
 var User=require('./models/users');
 var app = express();
+var env=require('dotenv')
 const PORT = 3001;
+env.config()
 app.use(express.json())
-mdb.connect("mongodb://localhost:27017/").then(() => {
+app.use(cors());
+mdb.connect(process.env.MONGO_URL).then(() => {
+    console.log(process.env.MONGO_URL)
     console.log("MongoDB Connection Successful")
 }).catch(() => {
     console.log("Check your connection String")
@@ -60,7 +65,7 @@ app.post('/signup',(req,res)=>{
         console.log(existinguser);
         if(existinguser)
         {
-            if(existinguser.password==password){
+            if(existinguser.password===password){
         res.json({message:"Login successful",loggedIn:true})
             }
             else{
