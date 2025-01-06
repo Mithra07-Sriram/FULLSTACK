@@ -14,7 +14,7 @@ const Signup = () => {
 
   const handleSignup = async () => {
     try {
-      const response = await axios.post("http://localhost:3001/signup", formData);
+      const response = await axios.post("https://fullstack-q6o5.onrender.com/signup", formData);
       console.log("Sign-Up Successful:", response.data);
       alert("Sign-Up Successful");
       navigate("/login"); // Navigate to login after signup
