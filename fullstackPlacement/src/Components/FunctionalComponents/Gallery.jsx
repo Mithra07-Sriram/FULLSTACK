@@ -16,6 +16,7 @@ const GAllery=()=>{
             Learning state concept
          </h2>
          <h3>The state of my variable count is {count}</h3>
+         <p>Hello</p>
          
          <button onMouseOver={()=>{setCount(count-1)}}>Decrement</button>
          
